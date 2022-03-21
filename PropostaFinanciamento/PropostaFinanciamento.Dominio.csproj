@@ -43,11 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Documento.cs" />
+    <Compile Include="Entidades\Endereco.cs" />
+    <Compile Include="Entidades\Imovel.cs" />
+    <Compile Include="Enums\TipoDocumento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entidades\Proposta.cs" />
+    <Compile Include="Entidades\Proponente.cs" />
+    <Compile Include="Enums\TipoImovel.cs" />
+    <Compile Include="Enums\Status.cs" />
+    <Compile Include="Enums\StatusProposta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="DiagramaDominio.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Excessoes\" />
+    <Folder Include="ObjetosValor\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

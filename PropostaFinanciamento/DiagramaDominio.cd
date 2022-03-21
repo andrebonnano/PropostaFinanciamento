@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PropostaFinanciamento.Entidades.Proposta">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACCAACAAAAAAQAAgEAAAQAAAAgAAIAAEAAAACAAAA=</HashCode>
+      <FileName>Entidades\Proposta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="StatusDocumento" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PropostaFinanciamento.Entidades.Proponente">
+    <Position X="1.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAgAAAEAAAAAAAAAABAAAAIAAAAAAAACAAEAAgA=</HashCode>
+      <FileName>Entidades\Proponente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PropostaFinanciamento.Entidades.Imovel">
+    <Position X="5.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAABEAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Entidades\Imovel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TipoImovel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PropostaFinanciamento.Entidades.Documento">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAAAAAAAAAAAAAAAAAAAABBAAAEAAAAABAAA=</HashCode>
+      <FileName>Entidades\Documento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="StatusProposta" />
+      <Property Name="TipoDocumento" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PropostaFinanciamento.Entidades.Endereco">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAACAAAAAAAACAAAAAAAAAAAAAAAABAAo=</HashCode>
+      <FileName>Entidades\Endereco.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="PropostaFinanciamento.Enums.TipoImovel">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAIAAA=</HashCode>
+      <FileName>Enums\TipoImovel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PropostaFinanciamento.Enums.StatusDocumento">
+    <Position X="3.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Enums\Status.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PropostaFinanciamento.Enums.StatusProposta">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAgAAAAw=</HashCode>
+      <FileName>Enums\StatusProposta.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PropostaFinanciamento.TipoDocumento">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAACAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Enum1.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
