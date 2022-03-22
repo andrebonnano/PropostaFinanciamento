@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Globalization;
 using System.Collections.Generic;
 using PropostaFinanciamento.Entidades;
@@ -13,7 +14,6 @@ namespace PropostaFinanciamento
             int qtdProponentes = 0;
             List<Proponente> proponentes = new List<Proponente>();
 
-            
             Console.WriteLine("------------------------------------------");
             Console.WriteLine("Olá, Seja bem vindo!");
             Console.WriteLine("Preciso que você preencha os dados abaixo");
@@ -110,7 +110,6 @@ namespace PropostaFinanciamento
 
 
             //////////////////// FINANCIAMENTO /////////////////////
-
             //Valor da entrada
             Console.Write("Qual será o valor de entrada? R$");
             double valorEntrada = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
@@ -130,6 +129,9 @@ namespace PropostaFinanciamento
 
             // Montando a proposta para exibir na tela
             proposta.MontaProposta();
+
+            //Cria Arquivo JSON
+            proposta.CriaArquivoJson();
 
 
             //////////////////// FUNÇÕES /////////////////////
