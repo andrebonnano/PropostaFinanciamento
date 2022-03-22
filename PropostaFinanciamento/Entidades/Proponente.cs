@@ -6,8 +6,9 @@ namespace PropostaFinanciamento.Entidades
 {
     public class Proponente
     {
-        public int Id { get; private set; }
+        public string Id  = Guid.NewGuid().ToString();
         public string Nome { get; private set; }
+        public string CPF { get; private set; }
         public DateTime DataNascimento { get; private set; }
         public IReadOnlyCollection<Documento> Documentos { get { return documentos; }}
         private List<Documento> documentos;
@@ -18,10 +19,10 @@ namespace PropostaFinanciamento.Entidades
 
         public Proponente() { }
 
-        public Proponente(int id, string nome, DateTime dataNascimento, double rendaMensal, bool negativado, string negativadoMotivo, Endereco endereco)
+        public Proponente(string nome, string cpf, DateTime dataNascimento, double rendaMensal, bool negativado, string negativadoMotivo, Endereco endereco)
         {
-            Id = id;
             Nome = nome;
+            CPF = cpf;
             DataNascimento = dataNascimento;
             RendaMensal = rendaMensal;
             Negativado = negativado;
@@ -29,15 +30,9 @@ namespace PropostaFinanciamento.Entidades
             Endereco = endereco;
         }
 
-        public void AddDocumento()
+        public void EnviarDocumento()
         {
 
-        }
-
-        public string GetCpf()
-        {
-            string cpf = "465.789.321-45";
-            return cpf;
         }
     }
 }

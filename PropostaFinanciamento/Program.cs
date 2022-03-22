@@ -34,6 +34,10 @@ namespace PropostaFinanciamento
                 Console.Write("Nome: ");
                 string _nome = Console.ReadLine();
 
+                //Nome
+                Console.Write("CPF: ");
+                string _cpf = Console.ReadLine();
+
                 //Data Nescimento
                 Console.Write("Data de Nascimento (dd/MM/yyyy): ");
                 DateTime _date = DateTime.Parse(Console.ReadLine());
@@ -61,7 +65,7 @@ namespace PropostaFinanciamento
                 //Endereço
                 Console.WriteLine("Digite os dados do endereço do proponente:");
                 Endereco enderecoProponente = InserirEndereco();
-                Proponente _prop = new Proponente(i, _nome, _date, _renda, _negativado, _negativadoMotivo, enderecoProponente);
+                Proponente _prop = new Proponente(_nome, _cpf, _date, _renda, _negativado, _negativadoMotivo, enderecoProponente);
                 proponentes.Add(_prop);
 
             }
@@ -106,7 +110,7 @@ namespace PropostaFinanciamento
             Endereco enderecoImovel = InserirEndereco();
 
             //Cria Objeto Imovel
-            Imovel imovel = new Imovel(valorTotal, inscrMunic, enderecoImovel, tipoImovel, 1234);
+            Imovel imovel = new Imovel(valorTotal, inscrMunic, enderecoImovel, tipoImovel);
 
 
             //////////////////// FINANCIAMENTO /////////////////////

@@ -1,15 +1,17 @@
 {
-    "ID": 24632,
-    "DataProposta": "22/03/2022 15:42:16",
+    "ID": "4a24a086-1895-4353-95c6-094145365a8e",
+    "DataProposta": "22/03/2022 16:04:10",
     "Status": "Criada",
+    "Entrada": "35500",
+    "Prestacoes": "120",
     "Proponentes": [
     {
-        "ID": 0,
+        "ID": "3a46a06c-1ff9-48a6-933e-b80021843166",
         "Nome": "André Bonnano",
         "DataNescimento": "13/12/1980 00:00:00",
         "RendaMensal": 6000,
-        "Negativado": True,
-        "NegativadoMotivo": "teste",
+        "Negativado": False,
+        "NegativadoMotivo": "",
         "Endereço": {
             "CEP": "88137-260",
             "Rua": "Rua das Cegonhas",
@@ -21,7 +23,7 @@
         }
     },
     {
-        "ID": 1,
+        "ID": "6be2cb58-8bca-491d-b212-df768ef308d5",
         "Nome": "Mari Bonnano",
         "DataNescimento": "20/06/1983 00:00:00",
         "RendaMensal": 5000,
@@ -38,7 +40,7 @@
         }
     }],
     "Imovel": {
-        "ID": 1234,
+        "ID": "520b077c-3384-460a-a58e-7b88864e6443",
         "Valor": 250000,
         "IscrMunicipal": "123.456.789",
         "Tipo": "Casa",

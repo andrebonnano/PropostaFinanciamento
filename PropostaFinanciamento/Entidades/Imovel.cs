@@ -6,7 +6,7 @@ namespace PropostaFinanciamento.Entidades
 {
     public class Imovel
     {
-        public int? Id { get; private set; }
+        public string Id = Guid.NewGuid().ToString();
         public double Valor { get; private set; }
         public string InscrMunicipal { get; private set; }
         public Endereco Endereco { get; private set; }
@@ -16,9 +16,8 @@ namespace PropostaFinanciamento.Entidades
         {
         }
 
-        public Imovel(double valor, string inscrMunicipal, Endereco endereco, TipoImovel tipoImovel, int? id)
+        public Imovel(double valor, string inscrMunicipal, Endereco endereco, TipoImovel tipoImovel)
         {
-            Id = id;
             Valor = valor;
             InscrMunicipal = inscrMunicipal;
             Endereco = endereco;
