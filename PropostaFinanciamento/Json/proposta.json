@@ -1,0 +1,56 @@
+{
+    "ID": 24632,
+    "DataProposta": "22/03/2022 15:42:16",
+    "Status": "Criada",
+    "Proponentes": [
+    {
+        "ID": 0,
+        "Nome": "André Bonnano",
+        "DataNescimento": "13/12/1980 00:00:00",
+        "RendaMensal": 6000,
+        "Negativado": True,
+        "NegativadoMotivo": "teste",
+        "Endereço": {
+            "CEP": "88137-260",
+            "Rua": "Rua das Cegonhas",
+            "Numero": "208",
+            "Complemento": "ap.302",
+            "Bairro": "Pedra Branca",
+            "Cidade": "Palhoça",
+            "Estado": "SC"
+        }
+    },
+    {
+        "ID": 1,
+        "Nome": "Mari Bonnano",
+        "DataNescimento": "20/06/1983 00:00:00",
+        "RendaMensal": 5000,
+        "Negativado": False,
+        "NegativadoMotivo": "",
+        "Endereço": {
+            "CEP": "88137-260",
+            "Rua": "Rua das Cegonhas",
+            "Numero": "208",
+            "Complemento": "ap.302",
+            "Bairro": "Pedra Branca",
+            "Cidade": "Palhoça",
+            "Estado": "SC"
+        }
+    }],
+    "Imovel": {
+        "ID": 1234,
+        "Valor": 250000,
+        "IscrMunicipal": "123.456.789",
+        "Tipo": "Casa",
+        "Endereço": {
+            "CEP": "88137-260",
+            "Rua": "Rua das Cegonhas",
+            "Numero": "208",
+            "Complemento": "ap.302",
+            "Bairro": "Pedra Branca",
+            "Cidade": "Palhoça",
+            "Estado": "SC"
+        }
+    }
+}
+

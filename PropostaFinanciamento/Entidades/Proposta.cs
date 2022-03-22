@@ -61,6 +61,9 @@ namespace PropostaFinanciamento.Entidades
             Console.WriteLine();
             Console.WriteLine("O valor financiado de R$" + (Imovel.Valor - Entrada).ToString("F2", CultureInfo.InvariantCulture) + " parcelado em " + QtdPrestacoes + " prestações");
             Console.WriteLine("O Juros aplicado será de " + Juros + "% ao ano.");
+
+            //Cria Arquivo JSON
+            CriaArquivoJson();
         }
 
         public void CriaArquivoJson()
@@ -72,10 +75,13 @@ namespace PropostaFinanciamento.Entidades
             sb.AppendLine($"    \"ID\": {Id},");
             sb.AppendLine($"    \"DataProposta\": \"{PropostaData}\",");
             sb.AppendLine($"    \"Status\": \"{StatusProposta}\",");
-            sb.AppendLine("    \"Proponentes\": {");
+            sb.AppendLine($"    \"Entrada\": \"{Entrada}\",");
+            sb.AppendLine($"    \"Prestacoes\": \"{QtdPrestacoes}\",");
+            sb.AppendLine("    \"Proponentes\": [");
             int i = 0;
             foreach (var proponente in Proponentes)
             {
+                sb.AppendLine("    {");
                 sb.AppendLine($"        \"ID\": {proponentes[i].Id},");
                 sb.AppendLine($"        \"Nome\": \"{proponentes[i].Nome}\",");
                 sb.AppendLine($"        \"DataNescimento\": \"{proponentes[i].DataNascimento}\",");
@@ -90,10 +96,10 @@ namespace PropostaFinanciamento.Entidades
                 sb.AppendLine($"            \"Bairro\": \"{proponentes[i].Endereco.Bairro}\",");
                 sb.AppendLine($"            \"Cidade\": \"{proponentes[i].Endereco.Cidade}\",");
                 sb.AppendLine($"            \"Estado\": \"{proponentes[i].Endereco.Estado}\"");
-                sb.AppendLine("        },");
+                sb.AppendLine("        }");
+                if (proponentes.Count == i + 1) { sb.AppendLine("    }],"); } else { sb.AppendLine("    },"); }
                 i++;
             }
-            sb.AppendLine("     }");
             sb.AppendLine("    \"Imovel\": {");
             sb.AppendLine($"        \"ID\": {Imovel.Id},");
             sb.AppendLine($"        \"Valor\": {Imovel.Valor},");

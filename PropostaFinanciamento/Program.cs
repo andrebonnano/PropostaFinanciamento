@@ -126,12 +126,8 @@ namespace PropostaFinanciamento
             //Cria objeto proposta
             Proposta proposta = new Proposta(proponentes, imovel, prestac, valorEntrada, juros );
 
-
             // Montando a proposta para exibir na tela
             proposta.MontaProposta();
-
-            //Cria Arquivo JSON
-            proposta.CriaArquivoJson();
 
 
             //////////////////// FUNÇÕES /////////////////////

@@ -58,10 +58,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="DiagramaDominio.cd" />
+    <None Include="Json\proposta.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Excessoes\" />
-    <Folder Include="Json\" />
     <Folder Include="ObjetosValor\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
