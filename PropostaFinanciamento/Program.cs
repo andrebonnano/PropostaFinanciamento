@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Globalization;
 using System.Collections.Generic;
 using PropostaFinanciamento.Entidades;
@@ -10,8 +9,8 @@ namespace PropostaFinanciamento
     internal class Program
     {
         static void Main(string[] args)
-        {
-            int qtdProponentes = 0;
+        {           
+
             List<Proponente> proponentes = new List<Proponente>();
 
             Console.WriteLine("------------------------------------------");
@@ -19,12 +18,12 @@ namespace PropostaFinanciamento
             Console.WriteLine("Preciso que você preencha os dados abaixo");
             Console.WriteLine("para darmos início à sua proposta!");
             Console.WriteLine();
-            
+
             //////////////////// PROPONENTES /////////////////////
             //Proponentes
             Console.Write("Qual o numero de Proponentes? ");
-            qtdProponentes = int.Parse(Console.ReadLine());
-            for(int i = 0; i < qtdProponentes; i++)
+            int qtdProponentes = int.Parse(Console.ReadLine());
+            for (int i = 0; i < qtdProponentes; i++)
             {
                 //Inicia
                 Console.WriteLine("------------------------------------------");
@@ -51,7 +50,7 @@ namespace PropostaFinanciamento
                 char _negChar = char.Parse(Console.ReadLine());
                 bool _negativado;
                 string _negativadoMotivo = "";
-                if(_negChar == 's' || _negChar == 'S')
+                if (_negChar == 's' || _negChar == 'S')
                 {
                     _negativado = true;
                     Console.WriteLine("Qual o motivo da Negativação? ");
@@ -80,7 +79,7 @@ namespace PropostaFinanciamento
             TipoImovel tipoImovel = TipoImovel.Casa;
             switch (_charImovel)
             {
-                case 'C' :
+                case 'C':
                     tipoImovel = TipoImovel.Casa;
                     break;
                 case 'A':
@@ -128,7 +127,7 @@ namespace PropostaFinanciamento
 
 
             //Cria objeto proposta
-            Proposta proposta = new Proposta(proponentes, imovel, prestac, valorEntrada, juros );
+            Proposta proposta = new Proposta(proponentes, imovel, prestac, valorEntrada, juros);
 
             // Montando a proposta para exibir na tela
             proposta.MontaProposta();

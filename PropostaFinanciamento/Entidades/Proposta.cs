@@ -4,6 +4,7 @@ using System.Text;
 using System.Globalization;
 using System.Collections.Generic;
 using PropostaFinanciamento.Enums;
+using PropostaFinanciamento.Calculos;
 
 namespace PropostaFinanciamento.Entidades
 {
@@ -45,21 +46,20 @@ namespace PropostaFinanciamento.Entidades
             Console.Write("Olá ");
             foreach (var proponente in Proponentes)
             {
-                Console.Write(proponente.Nome);
-                int i = Proponentes.Count;
-                if (i > 1)
-                {
-                    Console.Write(" e ");
-                    i--;
-                }
+                Console.Write(proponente.Nome + ", ");
             }
-            Console.WriteLine(", segue a proposta para ser analisada:");
+            Console.WriteLine("Segue abaixo, proposta para ser analisada:");
             Console.WriteLine();
-            Console.WriteLine("O Imóvel a ser financiado tem o valor total de R$" + Imovel.Valor.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("O valor de entrada é de R$" + Entrada.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine();
-            Console.WriteLine("O valor financiado de R$" + (Imovel.Valor - Entrada).ToString("F2", CultureInfo.InvariantCulture) + " parcelado em " + QtdPrestacoes + " prestações");
-            Console.WriteLine("O Juros aplicado será de " + Juros + "% ao ano.");
+            Console.WriteLine("Valor total do imóvel - R$" + Imovel.Valor.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Valor da Entrada - R$" + Entrada.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Valor a ser financiado -  R$" + (Imovel.Valor - Entrada).ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Quantidade de prestações - " + QtdPrestacoes);
+            Console.WriteLine("Juros anuais - " + Juros + "% ao ano.");
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("Segue abaixo a simulação do parcelamento:");
+
+            CalculoJuros jr = new CalculoJuros(Imovel.Valor - Entrada, QtdPrestacoes, Juros);
+            Console.WriteLine(jr.SimulaFinanciamento());
 
             //Cria Arquivo JSON
             CriaArquivoJson();
