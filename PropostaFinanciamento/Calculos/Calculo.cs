@@ -19,6 +19,7 @@ namespace PropostaFinanciamento.Calculos
             JurosAnuais = jurosAnuais;
         }
 
+        //Converte juros anuais para juros mensais
         public double AnualParaMensal()
         {
             double juros = JurosAnuais / 100;
@@ -26,9 +27,9 @@ namespace PropostaFinanciamento.Calculos
             return jurosMensal;
         }
 
+        //Gera a simulação do financiamento utilizando tabela SAC
         public string SimulaFinanciamento()
         {
-            //Calculos
             double BalanceDue = ValorFinanciado;
             double Amortization = ValorFinanciado / (double)Prestacoes;
             double Installment = 0;
@@ -39,6 +40,7 @@ namespace PropostaFinanciamento.Calculos
             CultureInfo culture = CultureInfo.CreateSpecificCulture("pt-BR");
             StringBuilder sb = new StringBuilder();
 
+            //Cria string para exibir as prestações detalhadas
             sb.AppendLine("---------------------------------------------------------------");
             for (int i = 0; i <= Prestacoes; i++)
             {
@@ -65,6 +67,7 @@ namespace PropostaFinanciamento.Calculos
             return sb.ToString();
         }
 
+        //Calcula a primeira parcela do financiamento
         public double PrimeiraParcela()
         {
             double primeiraParcela = (ValorFinanciado / (double)Prestacoes) + (ValorFinanciado * (AnualParaMensal() / 100));

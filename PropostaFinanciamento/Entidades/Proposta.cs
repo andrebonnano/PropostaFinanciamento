@@ -53,6 +53,7 @@ namespace PropostaFinanciamento.Entidades
             //Verifica se a Soma da renda viabiliza o financiamento
             if (_primeiraParcela > (somaRenda * 0.3))
             {
+                //Mensagem de negação do financiamento
                 Console.Clear();
                 Console.WriteLine("--------------------------------------------------------");
                 Console.WriteLine("Para que sua proposta sejá enviada, a soma da ");
@@ -70,7 +71,8 @@ namespace PropostaFinanciamento.Entidades
                 StatusProposta = StatusProposta.Recusada;
             }
             else
-            {            
+            {   
+                //Exibe a proposta montada
                 Console.Clear();
                 Console.WriteLine("----------------------------------------------");
                 Console.Write("Olá ");
@@ -87,11 +89,12 @@ namespace PropostaFinanciamento.Entidades
                 Console.WriteLine("Juros anuais - " + Juros + "% ao ano.");
                 Console.WriteLine("----------------------------------------------");
                 Console.WriteLine("Segue abaixo a simulação do parcelamento:");
-                            
+                
+                //Exibe as parcelas utilizando tabela SAC
                 Console.WriteLine(calc.SimulaFinanciamento());
             }
 
-            //Cria Arquivo JSON
+            //Cria Arquivo JSON da proposta
             CriaArquivoJson();
         }
 
