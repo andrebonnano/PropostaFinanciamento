@@ -6,7 +6,7 @@ namespace PropostaFinanciamento.Entidades
 {
     public class Proponente
     {
-        public string Id  = Guid.NewGuid().ToString();
+        public string Id { get; private set; }
         public string Nome { get; private set; }
         public string CPF { get; private set; }
         public DateTime DataNascimento { get; private set; }
@@ -21,6 +21,7 @@ namespace PropostaFinanciamento.Entidades
 
         public Proponente(string nome, string cpf, DateTime dataNascimento, double rendaMensal, bool negativado, string negativadoMotivo, Endereco endereco)
         {
+            Id = Guid.NewGuid().ToString();
             Nome = nome;
             CPF = cpf;
             DataNascimento = dataNascimento;

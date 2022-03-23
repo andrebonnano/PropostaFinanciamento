@@ -10,7 +10,7 @@ namespace PropostaFinanciamento.Entidades
 {
     public class Proposta
     {
-        public string Id = Guid.NewGuid().ToString();
+        public string Id { get; private set; }
         public Imovel Imovel { get; private set; }
         public DateTime PropostaData { get; private set; }
         public int QtdPrestacoes { get; private set; }
@@ -28,6 +28,7 @@ namespace PropostaFinanciamento.Entidades
 
         public Proposta(List<Proponente> proponentes, Imovel imovel, int qtdPrestacoes, double entrada, double juros)
         {
+            Id = Guid.NewGuid().ToString();
             this.proponentes = proponentes;
             Imovel = imovel;
             QtdPrestacoes = qtdPrestacoes;

@@ -168,10 +168,6 @@ namespace PropostaFinanciamento
 
                     return objEndereco;
                 }
-
-                ///////////////////// VALIDAÇÕES ////////////////////
-                
-
             }
             catch(DomainException ex)
             {

@@ -1,41 +1,59 @@
 {
-    "ID": "d1b6dba8-772b-4a20-904b-2110741e6812",
-    "DataProposta": "22/03/2022 22:43:12",
+    "ID": "4ac00132-521a-4f29-b4c5-84b3c6977c75",
+    "DataProposta": "23/03/2022 10:34:41",
     "Status": "Recusada",
-    "Entrada": "46000",
-    "Prestacoes": "80",
+    "Entrada": "55000",
+    "Prestacoes": "120",
     "Proponentes": [
     {
-        "ID": "80df9703-7665-4b96-adab-e62cd7f89343",
-        "Nome": "Andre",
-        "CPF": "32135",
+        "ID": "78ca5c35-34ff-4614-a617-23e6bfc4510d",
+        "Nome": "André Bonnano",
+        "CPF": "284.349.448-63",
         "DataNescimento": "13/12/1980 00:00:00",
         "RendaMensal": 6000,
+        "Negativado": True,
+        "NegativadoMotivo": "Cartão de Crédito",
+        "Endereço": {
+            "CEP": "88137-260",
+            "Rua": "Rua das Cegonhas",
+            "Numero": "208",
+            "Complemento": "ap.302",
+            "Bairro": "Pedra Branca",
+            "Cidade": "Palhoça",
+            "Estado": "SC"
+        }
+    },
+    {
+        "ID": "3e51c6fa-9e96-4522-bcd8-02a33421bea1",
+        "Nome": "Mari Bonnano",
+        "CPF": "312.715.828-99",
+        "DataNescimento": "20/06/1983 00:00:00",
+        "RendaMensal": 5000,
         "Negativado": False,
         "NegativadoMotivo": "",
         "Endereço": {
-            "CEP": "4356 345",
-            "Rua": "gsdfdsfg sdf",
-            "Numero": "45",
-            "Complemento": "45",
-            "Bairro": " ghsdf gsdf",
-            "Cidade": "sdfg sdf",
-            "Estado": "sd"
+            "CEP": "88137-260",
+            "Rua": "Rua das Cegonhas",
+            "Numero": "208",
+            "Complemento": "ap.302",
+            "Bairro": "Pedra Branca",
+            "Cidade": "Palhoça",
+            "Estado": "SC"
         }
     }],
     "Imovel": {
-        "ID": "78ebc537-10a9-45c1-8e27-fd2bd4f9eef9",
-        "Valor": 250000,
-        "IscrMunicipal": "435634563",
-        "Tipo": "Casa",
+        "ID": "e24c3f66-00c6-4920-805d-8aadd67e4d4f",
+        "Valor": 260000,
+        "IscrMunicipal": "123.456.789",
+        "Tipo": "Apartamento",
         "Endereço": {
-            "CEP": "45634 5",
-            "Rua": "fgth dfg",
-            "Numero": "34",
-            "Complemento": "34",
-            "Bairro": "efrg fd ",
-            "Cidade": "sdfg sdfg ",
-            "Estado": "dsf"
+            "CEP": "88137-260",
+            "Rua": "Rua Jair Hamms",
+            "Numero": "85",
+            "Complemento": "cj.101",
+            "Bairro": "Pedra Branca",
+            "Cidade": "Palhoça",
+            "Estado": "SC"
         }
     }
 }
