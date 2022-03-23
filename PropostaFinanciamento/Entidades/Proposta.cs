@@ -28,7 +28,6 @@ namespace PropostaFinanciamento.Entidades
 
         public Proposta(List<Proponente> proponentes, Imovel imovel, int qtdPrestacoes, double entrada, double juros)
         {
-            
             this.proponentes = proponentes;
             Imovel = imovel;
             QtdPrestacoes = qtdPrestacoes;
@@ -41,25 +40,56 @@ namespace PropostaFinanciamento.Entidades
 
         public void MontaProposta()
         {
-            Console.Clear();
-            Console.WriteLine("----------------------------------------------");
-            Console.Write("Olá ");
-            foreach (var proponente in Proponentes)
-            {
-                Console.Write(proponente.Nome + ", ");
-            }
-            Console.WriteLine("Segue abaixo, proposta para ser analisada:");
-            Console.WriteLine();
-            Console.WriteLine("Valor total do imóvel - R$" + Imovel.Valor.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Valor da Entrada - R$" + Entrada.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Valor a ser financiado -  R$" + (Imovel.Valor - Entrada).ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Quantidade de prestações - " + QtdPrestacoes);
-            Console.WriteLine("Juros anuais - " + Juros + "% ao ano.");
-            Console.WriteLine("----------------------------------------------");
-            Console.WriteLine("Segue abaixo a simulação do parcelamento:");
+            Calculo calc = new Calculo(Imovel.Valor - Entrada, QtdPrestacoes, Juros);
 
-            CalculoJuros jr = new CalculoJuros(Imovel.Valor - Entrada, QtdPrestacoes, Juros);
-            Console.WriteLine(jr.SimulaFinanciamento());
+            //Soma a renda dos proponentes
+            double somaRenda = 0;
+            double _primeiraParcela = calc.PrimeiraParcela();
+            foreach (var proponente in proponentes)
+            {
+                somaRenda += proponente.RendaMensal;
+            }
+
+            //Verifica se a Soma da renda viabiliza o financiamento
+            if (_primeiraParcela > (somaRenda * 0.3))
+            {
+                Console.Clear();
+                Console.WriteLine("--------------------------------------------------------");
+                Console.WriteLine("Para que sua proposta sejá enviada, a soma da ");
+                Console.WriteLine("renda dos proponentes precisa ser maior que 30% ");
+                Console.WriteLine("do valor da primaira prestação!");
+                Console.WriteLine();
+                Console.WriteLine("Soma da renda informada: R$ " + somaRenda.ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine("Valor da primeira prestação: R$ " + _primeiraParcela.ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine("Valor de renda mínima necessária: R$ " +  (_primeiraParcela / 0.3).ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine();
+                Console.WriteLine("Infelizmente seu financiamento não pode ser aprovado!");
+                Console.WriteLine("--------------------------------------------------------");
+
+                //Status Proposta Recusada
+                StatusProposta = StatusProposta.Recusada;
+            }
+            else
+            {            
+                Console.Clear();
+                Console.WriteLine("----------------------------------------------");
+                Console.Write("Olá ");
+                foreach (var proponente in Proponentes)
+                {
+                    Console.Write(proponente.Nome + ", ");
+                }
+                Console.WriteLine("Segue abaixo, proposta para ser analisada:");
+                Console.WriteLine();
+                Console.WriteLine("Valor total do imóvel - R$" + Imovel.Valor.ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine("Valor da Entrada - R$" + Entrada.ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine("Valor a ser financiado -  R$" + (Imovel.Valor - Entrada).ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine("Quantidade de prestações - " + QtdPrestacoes);
+                Console.WriteLine("Juros anuais - " + Juros + "% ao ano.");
+                Console.WriteLine("----------------------------------------------");
+                Console.WriteLine("Segue abaixo a simulação do parcelamento:");
+                            
+                Console.WriteLine(calc.SimulaFinanciamento());
+            }
 
             //Cria Arquivo JSON
             CriaArquivoJson();
@@ -121,13 +151,10 @@ namespace PropostaFinanciamento.Entidades
             {
                 sw.WriteLine(sb);
             }
-
-
         }
         
         public void EnviarDadosProposta()
-        {
-            
+        {            
         }
     }
 }

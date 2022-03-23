@@ -1,225 +1,41 @@
 {
-    "ID": "4a24a086-1895-4353-95c6-094145365a8e",
-    "DataProposta": "22/03/2022 16:04:10",
-    "Status": "Criada",
-    "Entrada": "35500",
-    "Prestacoes": "120",
+    "ID": "d1b6dba8-772b-4a20-904b-2110741e6812",
+    "DataProposta": "22/03/2022 22:43:12",
+    "Status": "Recusada",
+    "Entrada": "46000",
+    "Prestacoes": "80",
     "Proponentes": [
     {
-        "ID": "3a46a06c-1ff9-48a6-933e-b80021843166",
-        "Nome": "André Bonnano",
+        "ID": "80df9703-7665-4b96-adab-e62cd7f89343",
+        "Nome": "Andre",
+        "CPF": "32135",
         "DataNescimento": "13/12/1980 00:00:00",
         "RendaMensal": 6000,
         "Negativado": False,
         "NegativadoMotivo": "",
         "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
-        }
-    },
-    {
-        "ID": "6be2cb58-8bca-491d-b212-df768ef308d5",
-        "Nome": "Mari Bonnano",
-        "DataNescimento": "20/06/1983 00:00:00",
-        "RendaMensal": 5000,
-        "Negativado": False,
-        "NegativadoMotivo": "",
-        "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
+            "CEP": "4356 345",
+            "Rua": "gsdfdsfg sdf",
+            "Numero": "45",
+            "Complemento": "45",
+            "Bairro": " ghsdf gsdf",
+            "Cidade": "sdfg sdf",
+            "Estado": "sd"
         }
     }],
     "Imovel": {
-        "ID": "520b077c-3384-460a-a58e-7b88864e6443",
+        "ID": "78ebc537-10a9-45c1-8e27-fd2bd4f9eef9",
         "Valor": 250000,
-        "IscrMunicipal": "123.456.789",
+        "IscrMunicipal": "435634563",
         "Tipo": "Casa",
         "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
-        }
-    }
-}
-
-{
-    "ID": "4a0fde1e-8aba-41e7-9236-4aebe90b0e3a",
-    "DataProposta": "22/03/2022 19:06:48",
-    "Status": "Criada",
-    "Entrada": "35500",
-    "Prestacoes": "60",
-    "Proponentes": [
-    {
-        "ID": "9d94048b-ec90-4bcf-836b-976dfc968b99",
-        "Nome": "André Bonnano",
-        "CPF": "284.349.448-63",
-        "DataNescimento": "13/12/1980 00:00:00",
-        "RendaMensal": 6000,
-        "Negativado": False,
-        "NegativadoMotivo": "",
-        "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
-        }
-    }],
-    "Imovel": {
-        "ID": "031a8c24-b3e2-47fe-a7a7-2807db2c58f9",
-        "Valor": 250000,
-        "IscrMunicipal": "123.456.789",
-        "Tipo": "Casa",
-        "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
-        }
-    }
-}
-
-{
-    "ID": "9b8959b5-af40-4a7f-8d37-cb9f1b691de7",
-    "DataProposta": "22/03/2022 19:13:11",
-    "Status": "Criada",
-    "Entrada": "45000",
-    "Prestacoes": "20",
-    "Proponentes": [
-    {
-        "ID": "4e1e3284-e66c-4ff1-a81a-8f1f5bdf1223",
-        "Nome": "André Bonnano",
-        "CPF": "284.349.448-63",
-        "DataNescimento": "13/12/1980 00:00:00",
-        "RendaMensal": 6000,
-        "Negativado": False,
-        "NegativadoMotivo": "",
-        "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
-        }
-    }],
-    "Imovel": {
-        "ID": "6e0d7612-0cce-4aae-be7a-3d26a0b6a0ab",
-        "Valor": 260000,
-        "IscrMunicipal": "123.456.789",
-        "Tipo": "Casa",
-        "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua da Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
-        }
-    }
-}
-
-{
-    "ID": "7e75018a-faff-4508-8abb-641318af42a0",
-    "DataProposta": "22/03/2022 19:16:37",
-    "Status": "Criada",
-    "Entrada": "35500",
-    "Prestacoes": "120",
-    "Proponentes": [
-    {
-        "ID": "186c2899-636c-44fd-a348-91e72b0e88a3",
-        "Nome": "André Bonnano",
-        "CPF": "284.349.448-63",
-        "DataNescimento": "13/12/1980 00:00:00",
-        "RendaMensal": 6000,
-        "Negativado": False,
-        "NegativadoMotivo": "",
-        "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
-        }
-    }],
-    "Imovel": {
-        "ID": "62fee578-b2b3-4c42-ae64-6365a25bc168",
-        "Valor": 260000,
-        "IscrMunicipal": "123.456.789",
-        "Tipo": "Casa",
-        "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
-        }
-    }
-}
-
-{
-    "ID": "ffe8303c-3a19-4be2-be24-c54266b4383a",
-    "DataProposta": "22/03/2022 19:20:52",
-    "Status": "Criada",
-    "Entrada": "35500",
-    "Prestacoes": "120",
-    "Proponentes": [
-    {
-        "ID": "1491ba43-5d20-42be-b488-803a3e62f906",
-        "Nome": "André Bonnano",
-        "CPF": "284.349.448-63",
-        "DataNescimento": "13/12/1980 00:00:00",
-        "RendaMensal": 6000,
-        "Negativado": False,
-        "NegativadoMotivo": "",
-        "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
-        }
-    }],
-    "Imovel": {
-        "ID": "da7a8f09-7a1c-486f-a8ad-3efe6f34511b",
-        "Valor": 260000,
-        "IscrMunicipal": "123.456.789",
-        "Tipo": "Apartamento",
-        "Endereço": {
-            "CEP": "88137-260",
-            "Rua": "Rua das Cegonhas",
-            "Numero": "208",
-            "Complemento": "ap.302",
-            "Bairro": "Pedra Branca",
-            "Cidade": "Palhoça",
-            "Estado": "SC"
+            "CEP": "45634 5",
+            "Rua": "fgth dfg",
+            "Numero": "34",
+            "Complemento": "34",
+            "Bairro": "efrg fd ",
+            "Cidade": "sdfg sdfg ",
+            "Estado": "dsf"
         }
     }
 }

@@ -6,13 +6,13 @@ using System.Text;
 
 namespace PropostaFinanciamento.Calculos
 {
-    internal class CalculoJuros
+    internal class Calculo
     {
         public double ValorFinanciado { get; private set; }
         public int Prestacoes { get; private set; }
         public double JurosAnuais { get; private set; }
 
-        public CalculoJuros(double valorFinanciado, int prestacoes, double jurosAnuais)
+        public Calculo(double valorFinanciado, int prestacoes, double jurosAnuais)
         {
             ValorFinanciado = valorFinanciado;
             Prestacoes = prestacoes;
@@ -28,8 +28,7 @@ namespace PropostaFinanciamento.Calculos
 
         public string SimulaFinanciamento()
         {
-
-            //Calcuros
+            //Calculos
             double BalanceDue = ValorFinanciado;
             double Amortization = ValorFinanciado / (double)Prestacoes;
             double Installment = 0;
@@ -64,6 +63,12 @@ namespace PropostaFinanciamento.Calculos
             sb.AppendLine("Total de jutos Pagos - R$ " + TotalFees.ToString(specifier, culture));
 
             return sb.ToString();
+        }
+
+        public double PrimeiraParcela()
+        {
+            double primeiraParcela = (ValorFinanciado / (double)Prestacoes) + (ValorFinanciado * (AnualParaMensal() / 100));
+            return primeiraParcela;
         }
 
     }

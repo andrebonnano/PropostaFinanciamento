@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Collections.Generic;
 using PropostaFinanciamento.Entidades;
 using PropostaFinanciamento.Enums;
+using PropostaFinanciamento.Calculos;
 
 namespace PropostaFinanciamento
 {
@@ -12,6 +13,7 @@ namespace PropostaFinanciamento
         {           
 
             List<Proponente> proponentes = new List<Proponente>();
+
 
             Console.WriteLine("------------------------------------------");
             Console.WriteLine("Olá, Seja bem vindo!");
@@ -114,7 +116,7 @@ namespace PropostaFinanciamento
 
             //////////////////// FINANCIAMENTO /////////////////////
             //Valor da entrada
-            Console.Write("Qual será o valor de entrada? R$");
+            Console.WriteLine("Qual será o valor de entrada? (mínimo 20% - R$" + (valorTotal * 0.2) + ") " );
             double valorEntrada = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             //Juros
@@ -124,7 +126,6 @@ namespace PropostaFinanciamento
             //Prestações
             Console.Write("Qual será a quantidade de prestações? ");
             int prestac = int.Parse(Console.ReadLine());
-
 
             //Cria objeto proposta
             Proposta proposta = new Proposta(proponentes, imovel, prestac, valorEntrada, juros);

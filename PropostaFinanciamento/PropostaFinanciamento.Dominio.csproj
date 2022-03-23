@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculos\CalculoJuros.cs" />
+    <Compile Include="Calculos\Calculo.cs" />
     <Compile Include="Entidades\Documento.cs" />
     <Compile Include="Entidades\Endereco.cs" />
     <Compile Include="Entidades\Imovel.cs" />
