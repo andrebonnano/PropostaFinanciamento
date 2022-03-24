@@ -58,7 +58,7 @@
     <Compile Include="Entidades\Proposta.cs" />
     <Compile Include="Entidades\Proponente.cs" />
     <Compile Include="Enums\TipoImovel.cs" />
-    <Compile Include="Enums\Status.cs" />
+    <Compile Include="Enums\StatusDocumento.cs" />
     <Compile Include="Enums\StatusProposta.cs" />
   </ItemGroup>
   <ItemGroup>
