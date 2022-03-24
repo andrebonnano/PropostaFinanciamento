@@ -39,6 +39,16 @@ namespace PropostaFinanciamento.Entidades
             StatusDocumento = StatusDocumento.Enviado;
         }
 
+        public void AddProponente( Proponente prop)
+        {
+            proponentes.Add(prop);
+        }
+
+        public void AlteraStatus(StatusProposta status)
+        {
+            StatusProposta = status;
+        }
+
         public void MontaProposta()
         {
             Calculo calc = new Calculo(Imovel.Valor - Entrada, QtdPrestacoes, Juros);
@@ -155,10 +165,6 @@ namespace PropostaFinanciamento.Entidades
             {
                 sw.WriteLine(sb);
             }
-        }
-        
-        public void EnviarDadosProposta()
-        {            
         }
     }
 }

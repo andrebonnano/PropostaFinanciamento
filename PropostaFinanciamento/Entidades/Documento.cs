@@ -11,12 +11,27 @@ namespace PropostaFinanciamento.Entidades
         public StatusDocumento Status { get; private set; }
         public TipoDocumento Tipo { get; private set; }
 
-        public Documento(string caminhoImagem, TipoDocumento tipo)
+        public Documento(TipoDocumento tipo)
         {
             Id = Guid.NewGuid().ToString();
-            CaminhoImagem = caminhoImagem;
             Tipo = tipo;
             Status = StatusDocumento.Enviado;
+        }
+
+        public void Upload(string caminho)
+        {
+            CaminhoImagem = caminho;
+            Status = StatusDocumento.Enviado;
+        }
+
+        public void AprovarDocumento()
+        {
+            Status = StatusDocumento.Aprovado;
+        }
+
+        public void RecusarDocumento()
+        {
+            Status = StatusDocumento.Recusado;
         }
     }
 }

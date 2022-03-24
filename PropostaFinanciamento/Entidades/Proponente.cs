@@ -31,9 +31,10 @@ namespace PropostaFinanciamento.Entidades
             Endereco = endereco;
         }
 
-        public void EnviarDocumento()
+        public void EnviarDocumentos(TipoDocumento tipo, string caminho)
         {
-
+            Documento newDoc = new Documento(tipo);
+            newDoc.Upload(caminho);
         }
     }
 }

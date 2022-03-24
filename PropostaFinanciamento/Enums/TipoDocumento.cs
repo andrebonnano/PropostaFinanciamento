@@ -9,6 +9,8 @@ namespace PropostaFinanciamento.Enums
     {
         RG,
         CPF,
-        Passaporte
+        Passaporte,
+        CertidaoCasamento,
+        CertidaoNascimento
     }
 }
